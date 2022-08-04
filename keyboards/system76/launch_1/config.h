@@ -47,14 +47,14 @@
 #    define DRIVER_LED_TOTAL 84
 #    define RGB_MATRIX_KEYPRESSES                                      // Reacts to keypresses
 // #    define RGB_MATRIX_KEYRELEASES                                     // Reacts to keyreleases (instead of keypresses)
-// #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS                             // Enables framebuffer effects
+#    define RGB_MATRIX_FRAMEBUFFER_EFFECTS                             // Enables framebuffer effects
 #    define RGB_DISABLE_TIMEOUT 0                                      // Number of milliseconds to wait until RGB automatically turns off
 #    define RGB_DISABLE_AFTER_TIMEOUT 0                                // OBSOLETE: Number of ticks to wait until disabling effects
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED                             // Turns off effects when suspended
 // Limit brightness to support USB-A at 0.5 A
 // TODO: Do this dynamically based on power source
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 176                          // Limits maximum brightness of LEDs to 176 out of 255. If not defined, maximum brightness is set to 255
-#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_RAINBOW_MOVING_CHEVRON  // Sets the default mode, if none has been set
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 176                          // limits maximum brightness of leds to 176 out of 255. if not defined, maximum brightness is set to 255
+#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE          // Sets the default mode, if none has been set
 #    define RGB_MATRIX_STARTUP_HUE 142                                 // Sets the default hue value, if none has been set
 #    define RGB_MATRIX_STARTUP_SAT 255                                 // Sets the default saturation value, if none has been set
 #    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS       // Sets the default brightness value, if none has been set
@@ -72,6 +72,8 @@
 #    define ENABLE_RGB_MATRIX_RAINDROPS
 #    define ENABLE_RGB_MATRIX_SPLASH
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE
 #endif  // RGB_MATRIX_ENABLE
 
 // Mechanical locking support; use KC_LCAP, KC_LNUM, or KC_LSCR instead in keymap
@@ -112,3 +114,8 @@
 #define SYSTEM76_EC_EEPROM_ADDR (DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR + DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE)
 #define SYSTEM76_EC_EEPROM_SIZE (EEPROM_SIZE - SYSTEM76_EC_EEPROM_ADDR)
 // } System76 EC
+
+// Auto Shift Configs {
+#define AUTO_SHIFT_TIMEOUT 175
+#define NO_AUTO_SHIFT_ALPHA
+// } Auto Shift Configs
