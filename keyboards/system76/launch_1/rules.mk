@@ -8,7 +8,14 @@ F_CPU = 8000000
 F_USB = 16000000
 
 # Bootloader selection
-BOOTLOADER = atmel-dfu
+#   Teensy       halfkay
+#   Pro Micro    caterina
+#   Atmel DFU    atmel-dfu
+#   LUFA DFU     lufa-dfu
+#   QMK DFU      qmk-dfu
+#   ATmega32A    bootloadHID
+#   ATmega328P   USBasp
+BOOTLOADER = qmk-dfu
 
 # Build options
 #   change yes to no to disable
