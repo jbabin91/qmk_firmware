@@ -15,11 +15,11 @@ F_USB = 16000000
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = qmk-dfu
+BOOTLOADER = atmel-dfu
 
 # Build options
 #   change yes to no to disable
-BOOTMAGIC_ENABLE = no       # Bootmagic Lite
+BOOTMAGIC_ENABLE = yes       # Bootmagic Lite
 MOUSEKEY_ENABLE = no        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and system control
 CONSOLE_ENABLE = no         # Console for debug
